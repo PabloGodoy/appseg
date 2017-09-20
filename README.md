@@ -1,4 +1,3 @@
-# speechy
+# Appsegdev
 
-An Ionic app demo that integrates the speech recognition API for voice-controlled mobile apps.
-
+Aplicacion prototipo que integra spech-recognition y geolocalizacion para generar alertas a un mapa con una palabra clave.
