@@ -1,18 +1,49 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Speechy
+      Prototipo aplicacion seguridad
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <p>Is listening ? : {{ isListening }}</p>
-  <button ion-button (click)="getPermission()">Get Permission</button>
+ 
+<ion-item>
+  <ion-label floating>Nombre</ion-label>
+  <ion-input type="text" name="nombre" [(ngModel)]="data.nombre"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Telefono</ion-label>
+  <ion-input type="text" name="telefono" [(ngModel)]="data.telefono"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Contacto</ion-label>
+  <ion-input type="text" name="contacto" [(ngModel)]="data.contacto"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Telefono de contacto</ion-label>
+  <ion-input type="text" name="fonocontacto" [(ngModel)]="data.fonocontacto"></ion-input>
+</ion-item>
+
+
+<!-- <button ion-button block (click)="submit()">Guardar</button> -->
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+<ion-item>
+  <ion-label floating>Palabra clave</ion-label>
+  <ion-input type="text" name="palabra" [(ngModel)]="palabra"></ion-input>
+</ion-item>
+  <p>Activado ? : {{ isListening }}</p>
+  <button ion-button (click)="getPermission()">Permisos</button>
   <button ion-button (click)="listen()">
     <div>
       <ion-icon name="mic">
-        <label>Speak to me</label>
+        <label>Activar</label>
       </ion-icon>
     </div>
   </button>
@@ -20,6 +51,8 @@
   <ion-card>
     <ion-card-content *ngFor="let match of matches">
       <p>{{ match }}</p>
+      <br>
     </ion-card-content>
   </ion-card>
+        <p>{{ muestra }}</p>
 </ion-content>
