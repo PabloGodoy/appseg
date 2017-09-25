@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Prototipo aplicacion seguridad
+      <img src="http://cognitivachile.com/appsegdev/logo.jpeg"> <span>Asistente Seguridad</span>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,7 +13,7 @@
   <ion-input type="text" name="nombre" [(ngModel)]="data.nombre"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label floating>Telefono</ion-label>
+  <ion-label floating>Teléfono</ion-label>
   <ion-input type="text" name="telefono" [(ngModel)]="data.telefono"></ion-input>
 </ion-item>
 <ion-item>
@@ -21,7 +21,7 @@
   <ion-input type="text" name="contacto" [(ngModel)]="data.contacto"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label floating>Telefono de contacto</ion-label>
+  <ion-label floating>Teléfono de contacto</ion-label>
   <ion-input type="text" name="fonocontacto" [(ngModel)]="data.fonocontacto"></ion-input>
 </ion-item>
 
@@ -38,15 +38,16 @@
   <ion-label floating>Palabra clave</ion-label>
   <ion-input type="text" name="palabra" [(ngModel)]="palabra"></ion-input>
 </ion-item>
-  <p>Activado ? : {{ isListening }}</p>
-  <button ion-button (click)="getPermission()">Permisos</button>
-  <button ion-button (click)="listen()">
-    <div>
-      <ion-icon name="mic">
-        <label>Activar</label>
-      </ion-icon>
-    </div>
-  </button>
+  <p style="display:none;">Activado ? : {{ isListening }}</p>
+  <br><br>
+    <button ion-button (click)="getPermission()">Permisos</button>
+    <button ion-button (click)="listen()">
+      <div>
+        <ion-icon name="mic">
+          <label>Activar</label>
+        </ion-icon>
+      </div>
+    </button>
 
   <ion-card>
     <ion-card-content *ngFor="let match of matches">
